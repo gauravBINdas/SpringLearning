@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0" xmlns="http://java.sun.com/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+
+    <!--find Employee By Id-->
+    <named-query name="EmployeeDao.findById">
+        <query>SELECT e FROM EmployeeEntity e WHERE e.id= ?1</query>
+    </named-query>
+
+    <!--native SQL query to findAddress-->
+    <named-native-query name="EmployeeDao.findAddressOfEmployee" result-class="com.practice.spring.entity.AddressEntity">
+        <query>SELECT a.addressId,a.state,a.town FROM employee e inner join address a on e.addressId=a.addressId where e.id=?1</query>
+    </named-native-query>
+
+</entity-mappings>
