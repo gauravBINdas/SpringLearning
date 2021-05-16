@@ -15,5 +15,5 @@
 Upcoming Features:</ins><br/>
 
   1. Working on a simple yet secure UI.<br/>
-  2. support Authentication and Authorization.<br/><br/>
+  2. support Authentication and Authorization.<br/>
   3. Fix further vulnerabiities if any.<br/>
